@@ -69,7 +69,8 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = 'guarded-beyond-53264.herokuapp.com'
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+
+  config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
   :address  => 'smtp.sendgrid.net',
   :port     => '587',
@@ -78,6 +79,7 @@ Rails.application.configure do
   :password   => ENV['jp4q53jv1823'],
   :domain     => 'heroku.com',
   :enable_starttls_auto => true
+
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

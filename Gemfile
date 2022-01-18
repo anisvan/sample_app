@@ -15,6 +15,7 @@ gem 'mini_magick',   '4.9.5'
 gem 'webpacker',    '5.4.0'
 gem 'turbolinks',   '5.2.1'
 gem 'jbuilder',     '2.10.0'
+gem 'slim-rails'
 gem 'aws-sdk-s3', '1.46.0', require: false
 gem 'bootsnap',     '1.7.2', require: false
 

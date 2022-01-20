@@ -6,7 +6,7 @@ body
         ul.nav.navbar-nav.navbar-right
           li= link_to "Home", root_path
           li= link_to "Help", help_path
-          - if logged_in?
+          - if signed_in?
             li= link_to "Users", users_path
             li.dropdown
               a.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" 
@@ -14,8 +14,17 @@ body
                 b.caret
               ul.dropdown-menu
                 li= link_to "Profile", current_user
-                li= link_to "Settings", edit_user_path(current_user)
+                li= link_to "Settings", edit_user_registration_path(current_user)
                 li.divider
-                li= link_to "Log out", logout_path, method: "delete"
+                li= link_to "Log out", destroy_user_session_path, method: "delete"
           - else
-            li= link_to "Log in", login_path
+            li= link_to "Log in", new_user_session_path
+
+        
+
+
+
+
+
+
+    

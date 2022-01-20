@@ -4,8 +4,8 @@ User.create!(name: "Example User",
 	password:"foobar",
 	password_confirmation: "foobar",
 	admin: true,
-	activated: true,
-	activated_at: Time.zone.now)
+	# activated: true,
+	confirmed_at: Time.zone.now)
 
 # Generate a bunch of additional users.
 99.times do |n|
@@ -16,8 +16,8 @@ User.create!(name: "Example User",
 				email: email,
 				password: password,
 				password_confirmation: password,
-				activated: true,
-				activated_at: Time.zone.now)
+				# activated: true,
+				confirmed_at: Time.zone.now)
 end
 
 # Generate microposts for a subset of users.
